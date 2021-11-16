@@ -463,3 +463,28 @@ I = [
     'its',
     'ivy',
 ]
+
+J = [
+    'jab',
+    'jag',
+    'jam',
+    'jar',
+    'jaw',
+    'jay',
+    'jee',
+    'jet',
+    'jeu',
+    'jib',
+    'jig',
+    'jin',
+    'job',
+    'joe',
+    'jog',
+    'jot',
+    'jow',
+    'joy',
+    'jug',
+    'jun',
+    'jus',
+    'jut',
+]
