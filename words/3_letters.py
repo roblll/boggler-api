@@ -440,3 +440,26 @@ H = [
     'hut',
     'hyp',
 ]
+
+I = [
+    'ice',
+    'ich',
+    'ick',
+    'icy',
+    'ids',
+    'iff',
+    'ifs',
+    'igg',
+    'ilk',
+    'ill',
+    'imp',
+    'ink',
+    'inn',
+    'ins',
+    'ion',
+    'ire',
+    'irk',
+    'ism',
+    'its',
+    'ivy',
+]
