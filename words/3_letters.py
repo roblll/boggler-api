@@ -996,3 +996,25 @@ T = [
     'two',
     'tye',
 ]
+
+U = [
+    'udo',
+    'ugh',
+    'uke',
+    'ulu',
+    'umm',
+    'ump',
+    'ums',
+    'uni',
+    'uns',
+    'upo',
+    'ups',
+    'urb',
+    'urd',
+    'urn',
+    'urp',
+    'use',
+    'uta',
+    'ute',
+    'uts',
+]
