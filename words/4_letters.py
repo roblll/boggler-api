@@ -2967,3 +2967,21 @@ P = [
     'pyre',
     'pyro',
 ]
+
+Q = [
+    'qadi',
+    'qaid',
+    'qats',
+    'qoph',
+    'quad',
+    'quag',
+    'quai',
+    'quay',
+    'quey',
+    'quid',
+    'quin',
+    'quip',
+    'quit',
+    'quiz',
+    'quod',
+]
