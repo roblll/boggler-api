@@ -1,8 +1,8 @@
 from flask import Flask, jsonify
 application = Flask(__name__)
 
-@application.route('/')
-def hello():
+@application.route('/test')
+def test():
     return 'test'
 
 @application.route('/api', methods=['POST'])
