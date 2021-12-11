@@ -133,4 +133,19 @@ X = [
     'xylographers',
     'xylographies',
     'xylophonists',
+    # 13 letters
+    'xenodiagnoses',
+    'xenodiagnosis',
+    'xerophthalmia',
+    'xerophthalmic',
+    'xylographical',
+    # 14 letters
+    'xenodiagnostic',
+    'xenophobically',
+    'xenotransplant',
+    'xerophthalmias',
+    # 15 letters
+    'xenotransplants',
+    'xerographically',
+    'xeroradiography',
 ]
