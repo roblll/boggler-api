@@ -613,4 +613,27 @@ Y = [
     'ytterbiums',
     'yuppiedoms',
     'yuppifying',
+    # 11 letters
+    'yardmasters',
+    'yellowtails',
+    'yellowwares',
+    'yellowwoods',
+    'yesternight',
+    'yesteryears',
+    'yoctosecond',
+    'yokefellows',
+    'youngbloods',
+    'youngnesses',
+    'youthquakes',
+    # 12 letters
+    'yellowhammer',
+    'yellowthroat',
+    'yesternights',
+    'yoctoseconds',
+    'youngberries',
+    'youthfulness',
+    # 13 letters
+    'yellowhammers',
+    'yellowthroats',
+    'yuppification',
 ]
