@@ -593,4 +593,16 @@ Z = [
     'zooxanthella',
     'zwitterionic',
     'zygapophysis',
+    # 13 letters
+    'zombification',
+    'zoogeographer',
+    'zoogeographic',
+    'zooplanktonic',
+    'zoosporangium',
+    'zooxanthellae',
+    'zygodactylous',
+    # 14 letters
+    'zoogeographers',
+    # 15 letters
+    'zoogeographical',
 ]
