@@ -28,9 +28,51 @@ from words.X import X
 from words.Y import Y
 from words.Z import Z
 
+all_words = A + B + C + D + E + F + G + H + I + J + K + L + M + N + O + P + Q + R + S + T + U + V + W + X + Y + Z
+
+def findWords(board, trie):
+    output, row_len, col_len = set(), len(board), len(board[0])
+    directions = ((-1,0), (-1,1), (0,1), (1,1), (1,0), (1,-1), (0,-1), (-1,-1))
+
+    def backtrack(r, c, parent):
+        letter = board[r][c]
+        node = parent[letter]
+        if '#' in node:
+            output.add(node['#'])
+        board[r][c] = '*'
+        for dr, dc in directions:
+            nr, nc = r + dr, c + dc
+            if nr < 0 or nr >= row_len or nc < 0 or nc >= col_len or \
+                    board[nr][nc] not in node:
+                continue
+            backtrack(nr, nc, node)
+        board[r][c] = letter
+
+    for i in range(row_len):
+        for j in range(col_len):
+            if board[i][j] in trie:
+                backtrack(i, j, trie)
+    return output
+
 @application.route('/test')
 def test():
-    return 'test'
+    board = [
+        ["a", "n", "t", "h"],
+        ["o", "p", "o", "r"],
+        ["p", "a", "t", "h"],
+        ["u", "m", "s", "i"],
+    ]
+
+    trie = {}
+    for word in all_words:
+        cur = trie
+        for ch in word:
+            if ch not in cur:
+                cur[ch] = {}
+            cur = cur[ch]
+        cur['#'] = word
+
+    return " ".join(findWords(board, trie))
 
 @application.route('/api', methods=['POST'])
 def hello():
