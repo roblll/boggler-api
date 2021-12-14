@@ -72,7 +72,19 @@ def test():
             cur = cur[ch]
         cur['#'] = word
 
-    return " ".join(findWords(board, trie))
+    found_words = findWords(board, trie)
+
+    words_by_length = {}
+
+    for word in found_words:
+        if len(word) not in words_by_length:
+            words_by_length[len(word)] = []
+        words_by_length[len(word)].append(word)
+
+    for word_length in words_by_length:
+        words_by_length[word_length].sort()
+
+    return jsonify(words_by_length)
 
 @application.route('/api', methods=['POST'])
 def hello():
