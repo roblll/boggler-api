@@ -84,7 +84,9 @@ def test():
     for word_length in words_by_length:
         words_by_length[word_length].sort()
 
-    return jsonify(words_by_length)
+    data = {"board": board, "words": words_by_length}
+
+    return jsonify(data)
 
 @application.route('/api', methods=['POST'])
 def hello():
