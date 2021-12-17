@@ -54,7 +54,7 @@ def findWords(board, trie):
                 backtrack(i, j, trie)
     return output
 
-@application.route('/test')
+@application.route('/test', methods=['POST'])
 def test():
     board = [
         ["a", "n", "t", "h"],
