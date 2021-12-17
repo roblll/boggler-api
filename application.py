@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 application = Flask(__name__)
 import base64
+import datetime
 
 from words.A import A
 from words.B import B
@@ -58,6 +59,10 @@ def findWords(board, trie):
 @application.route('/test', methods=['POST'])
 def test():
     input_json = request.get_json(force=True)['file']
+    input_json += "=" * ((4 - len(input_json) % 4) % 4)
+    decodeit = open(f'{datetime.datetime.now()}.jpeg', 'wb')
+    decodeit.write(base64.b64decode((input_json)))
+    decodeit.close()
 
     board = [
         ["a", "n", "t", "h"],
