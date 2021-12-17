@@ -60,7 +60,8 @@ def findWords(board, trie):
 def test():
     input_json = request.get_json(force=True)['file']
     input_json += "=" * ((4 - len(input_json) % 4) % 4)
-    decodeit = open(f'{datetime.datetime.now()}.jpeg', 'wb')
+    im_name = f'{datetime.datetime.now()}.jpeg'
+    decodeit = open(im_name, 'wb')
     decodeit.write(base64.b64decode((input_json)))
     decodeit.close()
 
