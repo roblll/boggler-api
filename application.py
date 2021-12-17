@@ -1,5 +1,6 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 application = Flask(__name__)
+import base64
 
 from words.A import A
 from words.B import B
@@ -56,6 +57,8 @@ def findWords(board, trie):
 
 @application.route('/test', methods=['POST'])
 def test():
+    input_json = request.get_json(force=True)['file']
+
     board = [
         ["a", "n", "t", "h"],
         ["o", "p", "o", "r"],
