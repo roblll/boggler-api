@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 application = Flask(__name__)
 import base64
 import datetime
+# from PIL import Image
 
 from words.A import A
 from words.B import B
@@ -64,6 +65,31 @@ def test():
     decodeit = open(im_name, 'wb')
     decodeit.write(base64.b64decode((input_json)))
     decodeit.close()
+
+    # im = Image.open(im_name)
+
+    # width, height = im.size
+    # w, h = width, height
+
+    # im01 = im.crop((0, 0, w * .25, h * .25))
+    # im02 = im.crop((w * .25, 0, w * .5, h * .25))
+    # im03 = im.crop((w * .5, 0, w * .75, h * .25))
+    # im04 = im.crop((w * .75, 0, w, h * .25))
+
+    # im05 = im.crop((0, h * .25, w * .25, h * .5))
+    # im06 = im.crop((w * .25, h * .25, w * .5, h * .5))
+    # im07 = im.crop((w * .5, h * .25, w * .75, h * .5))
+    # im08 = im.crop((w * .75, h * .25, w, h * .5))
+
+    # im09 = im.crop((0, h * .5, w * .25, h * .75))
+    # im10 = im.crop((w * .25, h * .5, w * .5, h * .75))
+    # im11 = im.crop((w * .5, h * .5, w * .75, h * .75))
+    # im12 = im.crop((w * .75, h * .5, w, h * .75))
+
+    # im13 = im.crop((0, h * .75, w * .25, h))
+    # im14 = im.crop((w * .25, h * .75, w * .5, h))
+    # im15 = im.crop((w * .5, h * .75, w * .75, h))
+    # im16 = im.crop((w * .75, h * .75, w, h))
 
     board = [
         ["a", "n", "t", "h"],
