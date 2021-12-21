@@ -1,8 +1,9 @@
 from flask import Flask, jsonify, request
 application = Flask(__name__)
+from PIL import Image
 import base64
 import datetime
-# from PIL import Image
+import os
 
 from words.A import A
 from words.B import B
@@ -62,9 +63,9 @@ def test():
     input_json = request.get_json(force=True)['file']
     input_json += "=" * ((4 - len(input_json) % 4) % 4)
     im_name = f'{datetime.datetime.now()}.jpeg'
-    decodeit = open(im_name, 'wb')
-    decodeit.write(base64.b64decode((input_json)))
-    decodeit.close()
+    decoded_image = open(im_name, 'wb')
+    decoded_image.write(base64.b64decode((input_json)))
+    decoded_image.close()
 
     # im = Image.open(im_name)
 
@@ -90,6 +91,8 @@ def test():
     # im14 = im.crop((w * .25, h * .75, w * .5, h))
     # im15 = im.crop((w * .5, h * .75, w * .75, h))
     # im16 = im.crop((w * .75, h * .75, w, h))
+
+    os.remove(decoded_image.name)
 
     board = [
         ["a", "n", "t", "h"],
