@@ -122,7 +122,7 @@ def test():
     for word_length in words_by_length:
         words_by_length[word_length].sort()
 
-    data = {"board": board, "words": words_by_length}
+    data = {"board": board, "words": words_by_length, "count": len(found_words)}
 
     return jsonify(data)
 
