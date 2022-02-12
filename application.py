@@ -132,3 +132,10 @@ def hello():
     words_found = {"words": ["apple", "ball", "cat", "dog"]}
     
     return jsonify(words_found)
+
+@application.route('/hi')
+def hi():
+    
+    words_found = {"words": ["apple", "ball", "cat", "dog"]}
+    
+    return jsonify(words_found)
