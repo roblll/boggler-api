@@ -139,3 +139,7 @@ def hi():
     words_found = {"words": ["apple", "ball", "cat", "dog"]}
     
     return jsonify(words_found)
+
+@application.errorhandler(404)
+def handle_404(e):
+    return 'Not Found'
