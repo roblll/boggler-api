@@ -12,7 +12,7 @@ img_height = 180
 img_width = 180
 class_names = ['A_D', 'A_L', 'A_R', 'A_U', 'B_D', 'B_L', 'B_R', 'B_U', 'C_D', 'C_L', 'C_R', 'C_U', 'D_D', 'D_L', 'D_R', 'D_U', 'E_D', 'E_L', 'E_R', 'E_U', 'F_D', 'F_L', 'F_R', 'F_U', 'G_D', 'G_L', 'G_R', 'G_U', 'H_H', 'H_V', 'I_H', 'I_V', 'J_D', 'J_L', 'J_R', 'J_U', 'K_D', 'K_L', 'K_R', 'K_U', 'L_D', 'L_L', 'L_R', 'L_U', 'M_D', 'M_L',
                'M_R', 'M_U', 'N_D', 'N_L', 'N_R', 'N_U', 'O_H', 'O_V', 'P_D', 'P_L', 'P_R', 'P_U', 'Q_D', 'Q_L', 'Q_R', 'Q_U', 'R_D', 'R_L', 'R_R', 'R_U', 'S_H', 'S_V', 'T_D', 'T_L', 'T_R', 'T_U', 'U_D', 'U_L', 'U_R', 'U_U', 'V_D', 'V_L', 'V_R', 'V_U', 'W_D', 'W_L', 'W_R', 'W_U', 'X_H', 'X_V', 'Y_D', 'Y_L', 'Y_R', 'Y_U', 'Z_D', 'Z_L', 'Z_R', 'Z_U']
-model = tf.keras.models.load_model('model_v01')
+model = tf.keras.models.load_model('model_03')
 
 @application.route('/test', methods=['POST'])
 def test():
