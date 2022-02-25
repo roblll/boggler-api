@@ -14,8 +14,8 @@ class_names = ['A_D', 'A_L', 'A_R', 'A_U', 'B_D', 'B_L', 'B_R', 'B_U', 'C_D', 'C
                'M_R', 'M_U', 'N_D', 'N_L', 'N_R', 'N_U', 'O_H', 'O_V', 'P_D', 'P_L', 'P_R', 'P_U', 'Q_D', 'Q_L', 'Q_R', 'Q_U', 'R_D', 'R_L', 'R_R', 'R_U', 'S_H', 'S_V', 'T_D', 'T_L', 'T_R', 'T_U', 'U_D', 'U_L', 'U_R', 'U_U', 'V_D', 'V_L', 'V_R', 'V_U', 'W_D', 'W_L', 'W_R', 'W_U', 'X_H', 'X_V', 'Y_D', 'Y_L', 'Y_R', 'Y_U', 'Z_D', 'Z_L', 'Z_R', 'Z_U']
 model = tf.keras.models.load_model('model_03')
 
-@application.route('/test', methods=['POST'])
-def test():
+@application.route('/api', methods=['POST'])
+def api():
     input_json = request.get_json(force=True)['file']
     input_json += "=" * ((4 - len(input_json) % 4) % 4)
     random_hash = "%032x" % random.getrandbits(128)
@@ -221,19 +221,18 @@ def test():
     }
     return jsonify(data)
 
-@application.route('/api', methods=['POST'])
-def hello():
+@application.route('/test')
+def test():
     
-    words_found = {"words": ["apple", "ball", "cat", "dog"]}
-    
-    return jsonify(words_found)
-
-@application.route('/hi')
-def hi():
-    
-    words_found = {"words": ["apple", "ball", "cat", "dog"]}
-    
-    return jsonify(words_found)
+    data = {
+        "board": [
+            ["a", "b", "c", "d"],
+            ["e", "f", "g", "h"],
+            ["i", "j", "k", "l"],
+            ["m", "n", "o", "p"],
+        ]
+    }
+    return jsonify(data)
 
 @application.errorhandler(404)
 def handle_404(e):
