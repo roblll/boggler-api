@@ -223,6 +223,7 @@ def api():
 
 @application.route('/test')
 def test():
+    print("TEST TEST TEST TEST TEST TEST TEST TEST TEST ")
     
     data = {
         "board": [
