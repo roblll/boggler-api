@@ -238,3 +238,7 @@ def test():
 @application.errorhandler(404)
 def handle_404(e):
     return 'Not Found'
+
+if __name__ == "__main__":
+    application.debug = True
+    application.run(host="0.0.0.0")
