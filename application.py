@@ -235,6 +235,20 @@ def test():
     }
     return jsonify(data)
 
+@application.route('/test3')
+def test3():
+    print("TEST3 TEST3 TEST3 TEST3 TEST3 TEST3 TEST3 TEST3 TEST3 ")
+    
+    data = {
+        "board": [
+            ["d", "d", "d", "d"],
+            ["d", "d", "d", "d"],
+            ["d", "d", "d", "d"],
+            ["d", "d", "d", "d"],
+        ]
+    }
+    return jsonify(data)
+
 @application.errorhandler(404)
 def handle_404(e):
     return 'Not Found'
